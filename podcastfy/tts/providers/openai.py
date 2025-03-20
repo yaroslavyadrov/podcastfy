@@ -10,13 +10,13 @@ class OpenAITTS(TTSProvider):
     # Provider-specific SSML tags
     PROVIDER_SSML_TAGS: List[str] = ['break', 'emphasis']
     
-    def __init__(self, api_key: Optional[str] = None, model: str = "tts-1-hd"):
+    def __init__(self, api_key: Optional[str] = None, model: str = "gpt-4o-mini-tts"):
         """
         Initialize OpenAI TTS provider.
         
         Args:
             api_key: OpenAI API key. If None, expects OPENAI_API_KEY env variable
-            model: Model name to use. Defaults to "tts-1-hd"
+            model: Model name to use. Defaults to "gpt-4o-mini-tts"
         """
         if api_key:
             openai.api_key = api_key
