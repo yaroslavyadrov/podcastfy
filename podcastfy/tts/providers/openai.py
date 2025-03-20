@@ -33,6 +33,7 @@ class OpenAITTS(TTSProvider):
         self.validate_parameters(text, voice, model)
         
         try:
+            print(f"TAGGG create with {model}")
             response = openai.audio.speech.create(
                 model=model,
                 voice=voice,
